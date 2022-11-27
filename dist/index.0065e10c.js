@@ -1,0 +1,2 @@
+"use strict";const slide=document.querySelector(".slide"),pBasic=document.querySelector(".price-basic"),pProf=document.querySelector(".price-prof"),pMaster=document.querySelector(".price-master");function monthlyPlan(){pBasic.textContent="19.99",pProf.textContent="24.99",pMaster.textContent="39.99"}function annualPlan(){pBasic.textContent="199.99",pProf.textContent="249.99",pMaster.textContent="399.99"}slide.addEventListener("click",(()=>{slide.checked?monthlyPlan():annualPlan()}));
+//# sourceMappingURL=index.0065e10c.js.map
