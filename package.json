@@ -5,7 +5,8 @@
   "default": "index.html",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html --dist-dir ./dist"
+    "build": "parcel build index.html --dist-dir ./dist",
+    "deploy": "npm run build && git add . && git commit -a -m 'latest build' && git push origin main"
   },
   "keywords": [],
   "author": "",
