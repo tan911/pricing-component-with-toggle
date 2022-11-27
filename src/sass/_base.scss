@@ -1,0 +1,125 @@
+// variables
+// colors
+$color-primary-light: hsl(236, 72%, 79%);
+$color-primary-dark: hsl(237, 63%, 64%);
+
+$color-secondary-light: hsl(234, 14%, 74%);
+$color-secondary-dark: hsl(233, 13%, 49%);
+
+$color-white: hsl(240, 78%, 98%);
+$color-dark: hsl(232, 13%, 33%);
+
+// guttter
+$gutter-horizontal: 1rem;
+
+// mixin
+@mixin row-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// MEDIA QUERY MANAGER
+/* 
+0 - 600PX: PHONE
+600 - 900PX: TABLET PORTRAIT
+900 - 1200PX: TABLET LANDSCAPE
+[1200 - 1800PX: NORAMAL STYLES APPLY]
+1800PX + : BIG DESKTOP
+*/
+
+@mixin respond($breakpoint) {
+  // respond to max 600px screen size
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+
+  // respond to max 900px screen size
+  @if $breakpoint == tablet-portrait {
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  // respond to max 1200px screen size
+  @if $breakpoint == tablet-landscape {
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+
+  // respond to max 1800px screen size
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include respond(tablet-landscape) {
+    font-size: 56.25%;
+  }
+
+  @include respond(tablet-portrait) {
+    font-size: 50%;
+  }
+
+  @include respond(big-desktop) {
+    font-size: 68.75%;
+  }
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: $color-white;
+
+  @include respond(phone) {
+    padding-bottom: 5rem;
+  }
+}
+
+// background images
+.image-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -5;
+
+  @include respond(phone) {
+    width: 200px;
+  }
+}
+
+.image-bottom {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -5;
+
+  @include respond(phone) {
+    display: none;
+  }
+}
+
+// utilities
+.heading-primary {
+  font-size: 4rem;
+  color: $color-secondary-dark;
+  margin: 6rem 0;
+}
+.u-text-center {
+  text-align: center;
+}

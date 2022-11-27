@@ -1,0 +1,172 @@
+.content {
+  width: 90%;
+  max-width: 144rem;
+  margin: 0 auto;
+
+  @include respond(tablet-landscape) {
+    width: 95%;
+  }
+
+  @include respond(tablet-portrait) {
+    width: 100%;
+  }
+
+  .row {
+    font-size: 1.5rem;
+    @include row-center;
+    gap: 3rem;
+    color: $color-secondary-light;
+    margin-bottom: 7rem;
+  }
+
+  .pricing-container {
+    @include row-center;
+    width: 100%;
+
+    @include respond(phone) {
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    .pricing {
+      text-align: center;
+      width: 25%;
+
+      @include respond(tablet-landscape) {
+        width: 30%;
+      }
+
+      @include respond(phone) {
+        width: 90%;
+      }
+
+      & .pricing-header {
+        text-transform: capitalize;
+        margin-bottom: 3rem;
+        font-size: 2rem;
+      }
+
+      & p {
+        margin: 1.5rem 0;
+        font-size: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+
+        & .price {
+          font-size: 6rem;
+          text-align: center;
+        }
+      }
+
+      & .pricing-benifits {
+        width: 100%;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+
+        & li {
+          list-style-type: none;
+          padding: 2rem 0;
+          border-top: 1px solid rgba($color-secondary-light, 0.5);
+
+          &:nth-child(3) {
+            border-bottom: 1px solid rgba($color-secondary-light, 0.5);
+          }
+        }
+      }
+
+      & .btn {
+        padding: 1.5rem;
+        cursor: pointer;
+        width: 100%;
+        text-transform: uppercase;
+        font-family: inherit;
+        border: none;
+        border-radius: 6px;
+        margin-top: 1rem;
+        letter-spacing: 2;
+      }
+    }
+
+    & .pricing__panel--1 {
+      border-bottom-left-radius: 10px;
+      border-top-left-radius: 10px;
+
+      @include respond(phone) {
+        border-radius: 10px;
+      }
+    }
+
+    & .pricing__panel--3 {
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+
+      @include respond(phone) {
+        border-radius: 10px;
+      }
+    }
+
+    // apply all styles except the li(2)
+    & .pricing:not(:nth-child(2)) {
+      background-color: white;
+      padding: 3rem;
+      box-shadow: 0 1.5rem 4rem rgba($color-dark, 0.15);
+
+      & .pricing-header {
+        color: $color-secondary-dark;
+      }
+
+      & p {
+        color: $color-dark;
+      }
+
+      & .pricing-benifits {
+        color: $color-secondary-dark;
+      }
+
+      & .btn {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary-dark
+        );
+        color: $color-white;
+        border: 1px solid $color-primary-light;
+        transition: all 0.3s;
+
+        &:hover {
+          background: none;
+          border: 1px solid $color-secondary-dark;
+          color: $color-primary-dark;
+        }
+      }
+    }
+
+    // apply all styles only the li(2)
+    & .pricing:nth-child(2) {
+      padding: 6rem 3rem;
+      color: $color-white;
+      background-image: linear-gradient(
+        to right bottom,
+        $color-primary-light,
+        $color-primary-dark
+      );
+      box-shadow: 0 1.5rem 4rem rgba($color-dark, 0.2);
+      border-radius: 10px;
+
+      & .btn {
+        background: $color-white;
+        color: $color-primary-dark;
+        border: 1px solid $color-primary-light;
+        transition: all 0.3s;
+
+        &:hover {
+          background: none;
+          border: 1px solid none;
+          color: $color-white;
+        }
+      }
+    }
+  }
+}
