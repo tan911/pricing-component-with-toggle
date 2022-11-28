@@ -4,6 +4,7 @@
   "description": "pricing-component",
   "default": "index.html",
   "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w",
     "start": "parcel index.html",
     "build": "parcel build index.html --dist-dir ./dist"
   },
@@ -13,5 +14,8 @@
   "devDependencies": {
     "@parcel/transformer-sass": "^2.8.0",
     "parcel": "^2.8.0"
+  },
+  "dependencies": {
+    "node-sass": "^8.0.0"
   }
 }

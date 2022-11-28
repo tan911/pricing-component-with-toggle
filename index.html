@@ -11,8 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="src/sass/main.scss" />
-    <script defer src="./src/js/app.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
     <title>Pricing Panel</title>
   </head>
   <body>
@@ -27,8 +26,8 @@
       <div class="row">
         <div class="annual">Annually</div>
         <div>
-          <label class="switch">
-            <input type="checkbox" class="slide" />
+          <label class="switch" for="toggle">
+            <input type="checkbox" name="toggle" id="toggle" class="slide" />
             <span class="slider round"></span>
           </label>
         </div>
@@ -68,5 +67,7 @@
         </div>
       </div>
     </div>
+
+    <script src="./src/js/app.js"></script>
   </body>
 </html>
