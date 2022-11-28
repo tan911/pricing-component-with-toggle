@@ -20,7 +20,7 @@ html {
   @media (max-width: 56.25em) {
     html {
       font-size: 50%; } }
-  @media (min-width: 112.5em) {
+  @media (min-width: 75em) {
     html {
       font-size: 68.75%; } }
 
@@ -53,6 +53,10 @@ body {
   font-size: 4rem;
   color: #6d708d;
   margin: 6rem 0; }
+  @media (min-width: 75em) {
+    .heading-primary {
+      font-size: 3rem;
+      margin: 3rem; } }
 
 .u-text-center {
   text-align: center; }
@@ -131,6 +135,9 @@ input:checked + .slider:before {
     gap: 3rem;
     color: #b3b5c6;
     margin-bottom: 7rem; }
+    @media (min-width: 75em) {
+      .content .row {
+        margin-bottom: 5rem; } }
   .content .pricing-container {
     display: flex;
     align-items: center;
@@ -163,6 +170,9 @@ input:checked + .slider:before {
         .content .pricing-container .pricing p .price {
           font-size: 6rem;
           text-align: center; }
+          @media (min-width: 75em) {
+            .content .pricing-container .pricing p .price {
+              font-size: 5rem; } }
       .content .pricing-container .pricing .pricing-benifits {
         width: 100%;
         font-size: 1.5rem;
@@ -199,6 +209,9 @@ input:checked + .slider:before {
       background-color: white;
       padding: 3rem;
       box-shadow: 0 1.5rem 4rem rgba(73, 76, 95, 0.15); }
+      @media (min-width: 75em) {
+        .content .pricing-container .pricing:not(:nth-child(2)) {
+          padding: 2.5rem; } }
       .content .pricing-container .pricing:not(:nth-child(2)) .pricing-header {
         color: #6d708d; }
       .content .pricing-container .pricing:not(:nth-child(2)) p {
@@ -220,6 +233,9 @@ input:checked + .slider:before {
       background-image: linear-gradient(to right bottom, #a3a8f0, #696fdd);
       box-shadow: 0 1.5rem 4rem rgba(73, 76, 95, 0.2);
       border-radius: 10px; }
+      @media (min-width: 75em) {
+        .content .pricing-container .pricing:nth-child(2) {
+          padding: 4rem 2.5rem; } }
       .content .pricing-container .pricing:nth-child(2) .btn {
         background: #f6f6fe;
         color: #696fdd;

@@ -17,6 +17,10 @@
     gap: 3rem;
     color: $color-secondary-light;
     margin-bottom: 7rem;
+
+    @include respond(big-desktop) {
+      margin-bottom: 5rem;
+    }
   }
 
   .pricing-container {
@@ -57,6 +61,10 @@
         & .price {
           font-size: 6rem;
           text-align: center;
+
+          @include respond(big-desktop) {
+            font-size: 5rem;
+          }
         }
       }
 
@@ -113,6 +121,10 @@
       padding: 3rem;
       box-shadow: 0 1.5rem 4rem rgba($color-dark, 0.15);
 
+      @include respond(big-desktop) {
+        padding: 2.5rem;
+      }
+
       & .pricing-header {
         color: $color-secondary-dark;
       }
@@ -154,6 +166,10 @@
       );
       box-shadow: 0 1.5rem 4rem rgba($color-dark, 0.2);
       border-radius: 10px;
+
+      @include respond(big-desktop) {
+        padding: 4rem 2.5rem;
+      }
 
       & .btn {
         background: $color-white;

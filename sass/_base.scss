@@ -52,7 +52,7 @@ $gutter-horizontal: 1rem;
 
   // respond to max 1800px screen size
   @if $breakpoint == big-desktop {
-    @media (min-width: 112.5em) {
+    @media (min-width: 75em) {
       @content;
     }
   }
@@ -119,6 +119,11 @@ body {
   font-size: 4rem;
   color: $color-secondary-dark;
   margin: 6rem 0;
+
+  @include respond(big-desktop) {
+    font-size: 3rem;
+    margin: 3rem;
+  }
 }
 .u-text-center {
   text-align: center;
