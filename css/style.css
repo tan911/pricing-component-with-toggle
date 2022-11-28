@@ -125,6 +125,9 @@ input:checked + .slider:before {
   width: 90%;
   max-width: 144rem;
   margin: 0 auto; }
+  @media (min-width: 75em) {
+    .content {
+      border: 1px solid red; } }
   @media (max-width: 75em) {
     .content {
       width: 95%; } }
@@ -156,7 +159,8 @@ input:checked + .slider:before {
       width: 25%; }
       @media (min-width: 75em) {
         .content .pricing-container .pricing {
-          width: 30%; } }
+          width: 30%;
+          border: 1px solid red; } }
       @media (max-width: 75em) {
         .content .pricing-container .pricing {
           width: 30%; } }
