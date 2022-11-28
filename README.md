@@ -59,4 +59,4 @@ This site continuously working with accessibility, I also learning about accessi
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
+- Website - [Jovan Lanutan](https://portfolio-tan911.vercel.app/)
