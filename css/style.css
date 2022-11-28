@@ -154,6 +154,9 @@ input:checked + .slider:before {
     .content .pricing-container .pricing {
       text-align: center;
       width: 25%; }
+      @media (min-width: 75em) {
+        .content .pricing-container .pricing {
+          width: 30%; } }
       @media (max-width: 75em) {
         .content .pricing-container .pricing {
           width: 30%; } }
@@ -164,6 +167,9 @@ input:checked + .slider:before {
         text-transform: capitalize;
         margin-bottom: 3rem;
         font-size: 2rem; }
+        @media (min-width: 75em) {
+          .content .pricing-container .pricing .pricing-header {
+            font-size: 1.8rem; } }
       .content .pricing-container .pricing p {
         margin: 1.5rem 0;
         font-size: 4rem;
@@ -176,7 +182,7 @@ input:checked + .slider:before {
           text-align: center; }
           @media (min-width: 75em) {
             .content .pricing-container .pricing p .price {
-              font-size: 5rem; } }
+              font-size: 4.5rem; } }
       .content .pricing-container .pricing .pricing-benifits {
         width: 100%;
         font-size: 1.5rem;
