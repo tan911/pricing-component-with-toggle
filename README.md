@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution URL](https://github.com/tan911/pricing-component-with-toggle)
+- Live Site URL: [Live site](https://tan911.github.io/pricing-component-with-toggle/)
 
 ## My process
 
@@ -51,7 +51,7 @@ What I love about this challenges is that I could practice my skills using the t
 
 ### Continued development
 
-This site continuely working with accessibility, I also learning about accessibility for everyone could use this site.
+This site continuously working with accessibility, I also learning about accessibility so that everyone could use this site.
 
 ### Useful resources
 
