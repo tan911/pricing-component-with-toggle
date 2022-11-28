@@ -3,10 +3,6 @@
   max-width: 144rem;
   margin: 0 auto;
 
-  @include respond(big-desktop) {
-    border: 1px solid red;
-  }
-
   @include respond(tablet-landscape) {
     width: 95%;
   }
@@ -39,11 +35,6 @@
     .pricing {
       text-align: center;
       width: 25%;
-
-      @include respond(big-desktop) {
-        width: 30%;
-        border: 1px solid red;
-      }
 
       @include respond(tablet-landscape) {
         width: 30%;
