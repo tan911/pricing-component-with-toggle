@@ -57,6 +57,10 @@ body {
     .heading-primary {
       font-size: 3rem;
       margin: 3rem; } }
+  @media (max-width: 75em) {
+    .heading-primary {
+      font-size: 3rem;
+      margin: 3rem; } }
 
 .u-text-center {
   text-align: center; }

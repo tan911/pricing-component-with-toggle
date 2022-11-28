@@ -124,6 +124,11 @@ body {
     font-size: 3rem;
     margin: 3rem;
   }
+
+  @include respond(tablet-landscape) {
+    font-size: 3rem;
+    margin: 3rem;
+  }
 }
 .u-text-center {
   text-align: center;
