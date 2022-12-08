@@ -1,191 +1,183 @@
-.content {
-  width: 90%;
-  max-width: 144rem;
-  margin: 0 auto;
+.image {
+  position: absolute;
 
-  @include respond(tablet-landscape) {
+  &__top {
+    top: 0;
+    right: 0;
+
+    @include respond(phone) {
+      right: -150px;
+    }
+  }
+
+  &__bottom {
+    left: 0;
+    bottom: 0;
+
+    @include respond(phone) {
+      display: none;
+    }
+  }
+}
+
+.main {
+  width: 100%;
+  max-width: 65rem;
+  text-align: center;
+  z-index: 100;
+
+  @include respond(laptop-landscape) {
     width: 95%;
   }
 
-  @include respond(tablet-portrait) {
-    width: 100%;
-  }
+  &__title {
+    font-size: clamp(1.5rem, calc(1vw + 1.078rem), 2rem);
+    font-weight: 300;
+    color: $color-tertiary-light;
+    margin: 0 0 1em 0;
 
-  .row {
-    font-size: 1.5rem;
-    @include row-center;
-    gap: 3rem;
-    color: $color-secondary-light;
-    margin-bottom: 7rem;
-
-    @include respond(big-desktop) {
-      margin-bottom: 5rem;
+    @include respond(phone) {
+      margin: 2em 0;
     }
   }
 
-  .pricing-container {
-    @include row-center;
-    width: 100%;
+  &__switch {
+    margin-bottom: 4em;
+    font-size: clamp(0.9rem, calc(0.6vw + 0.675rem), 1.1rem);
+  }
+
+  &__pricing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @include respond(phone) {
       flex-direction: column;
-      gap: 3rem;
     }
 
-    .pricing {
-      text-align: center;
-      width: 25%;
+    @include respond(laptop-portrait) {
+      flex-direction: column;
+      gap: 1rem;
+    }
 
-      @include respond(tablet-landscape) {
-        width: 30%;
+    &--1,
+    &--2,
+    &--3 {
+      display: flex;
+      flex-direction: column;
+
+      @include respond(laptop-portrait) {
+        width: 100%;
+        border-radius: $sm-rounded;
       }
 
       @include respond(phone) {
-        width: 90%;
+        width: 95%;
+        border-radius: $sm-rounded;
       }
+    }
 
-      & .pricing-header {
-        text-transform: capitalize;
-        margin-bottom: 3rem;
-        font-size: 2rem;
+    &--1 {
+      border-top-left-radius: $sm-rounded;
+      border-bottom-left-radius: $sm-rounded;
+    }
 
-        @include respond(big-desktop) {
-          font-size: 1.8rem;
-        }
-      }
+    &--3 {
+      border-top-right-radius: $sm-rounded;
+      border-bottom-right-radius: $sm-rounded;
+    }
+
+    &--1,
+    &--3 {
+      flex: 0 1 25em;
+      padding: 2em;
+      color: $color-tertiary-light;
+      background-color: $color-white;
+      box-shadow: 1em 1em 1.5em rgba($color-tertiary-dark, 0.25);
 
       & p {
-        margin: 1.5rem 0;
-        font-size: 4rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 0.5rem;
-
-        & .price {
-          font-size: 6rem;
-          text-align: center;
-
-          @include respond(big-desktop) {
-            font-size: 4.5rem;
-          }
-        }
+        color: $color-tertiary-dark;
       }
 
-      & .pricing-benifits {
-        width: 100%;
-        font-size: 1.5rem;
-        margin-bottom: 2rem;
-
-        & li {
-          list-style-type: none;
-          padding: 2rem 0;
-          border-top: 1px solid rgba($color-secondary-light, 0.5);
-
-          &:nth-child(3) {
-            border-bottom: 1px solid rgba($color-secondary-light, 0.5);
-          }
-        }
-      }
-
-      & .btn {
-        padding: 1.5rem;
-        cursor: pointer;
-        width: 100%;
-        text-transform: uppercase;
-        font-family: inherit;
-        border: none;
-        border-radius: 6px;
-        margin-top: 1rem;
-        letter-spacing: 2;
-      }
-    }
-
-    & .pricing__panel--1 {
-      border-bottom-left-radius: 10px;
-      border-top-left-radius: 10px;
-
-      @include respond(phone) {
-        border-radius: 10px;
-      }
-    }
-
-    & .pricing__panel--3 {
-      border-bottom-right-radius: 10px;
-      border-top-right-radius: 10px;
-
-      @include respond(phone) {
-        border-radius: 10px;
-      }
-    }
-
-    // apply all styles except the li(2)
-    & .pricing:not(:nth-child(2)) {
-      background-color: white;
-      padding: 3rem;
-      box-shadow: 0 1.5rem 4rem rgba($color-dark, 0.15);
-
-      @include respond(big-desktop) {
-        padding: 2.5rem;
-      }
-
-      & .pricing-header {
-        color: $color-secondary-dark;
-      }
-
-      & p {
-        color: $color-dark;
-      }
-
-      & .pricing-benifits {
-        color: $color-secondary-dark;
-      }
-
-      & .btn {
+      & button {
+        color: $color-white;
         background-image: linear-gradient(
           to right bottom,
           $color-primary-light,
           $color-primary-dark
         );
-        color: $color-white;
         border: 1px solid $color-primary-light;
-        transition: all 0.3s;
 
         &:hover {
-          background: none;
-          border: 1px solid $color-secondary-dark;
           color: $color-primary-dark;
+          background: $color-white;
+          border: 1px solid $color-secondary-dark;
         }
       }
     }
 
-    // apply all styles only the li(2)
-    & .pricing:nth-child(2) {
-      padding: 6rem 3rem;
+    &--2 {
+      flex: 0 1 24em;
+      padding: 3.5em 2em;
       color: $color-white;
+      border-radius: $sm-rounded;
       background-image: linear-gradient(
         to right bottom,
         $color-primary-light,
         $color-primary-dark
       );
-      box-shadow: 0 1.5rem 4rem rgba($color-dark, 0.2);
-      border-radius: 10px;
 
-      @include respond(big-desktop) {
-        padding: 4rem 2.5rem;
+      @include respond(phone) {
+        padding: 2em;
       }
 
-      & .btn {
-        background: $color-white;
+      & button {
         color: $color-primary-dark;
-        border: 1px solid $color-primary-light;
-        transition: all 0.3s;
+        background-color: $color-secondary-light;
+        border: 1px solid $color-white;
 
         &:hover {
           background: none;
-          border: 1px solid none;
           color: $color-white;
         }
+      }
+    }
+  }
+
+  &__plan {
+    font-size: clamp(0.9rem, calc(0.6vw + 0.675rem), 1.1rem);
+    font-weight: 300;
+    text-transform: capitalize;
+  }
+
+  &__price {
+    font-size: clamp(2rem, calc(1vw + 1.625rem), 2.5rem);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    & span {
+      font-size: clamp(3.5rem, calc(1vw + 3.125rem), 4rem);
+    }
+  }
+
+  &__benifits {
+    width: 100%;
+    padding: 0;
+    margin: 1em 0 2em 0;
+
+    @include respond(phone) {
+      margin: 0 0 1em 0;
+    }
+
+    & li {
+      font-size: clamp(0.9rem, calc(0.6vw + 0.675rem), 1.1rem);
+      list-style-type: none;
+      padding: 0.8em 0;
+      border-bottom: 1px solid rgba($color-secondary-dark, 0.5);
+
+      &:first-of-type {
+        border-top: 1px solid rgba($color-secondary-dark, 0.5);
       }
     }
   }

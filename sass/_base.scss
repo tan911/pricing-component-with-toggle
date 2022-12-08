@@ -1,135 +1,129 @@
-// variables
-// colors
-$color-primary-light: hsl(236, 72%, 79%);
-$color-primary-dark: hsl(237, 63%, 64%);
+// modern css reset - https://piccalil.li/blog/a-modern-css-reset/
 
-$color-secondary-light: hsl(234, 14%, 74%);
-$color-secondary-dark: hsl(233, 13%, 49%);
-
-$color-white: hsl(240, 78%, 98%);
-$color-dark: hsl(232, 13%, 33%);
-
-// guttter
-$gutter-horizontal: 1rem;
-
-// mixin
-@mixin row-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-// MEDIA QUERY MANAGER
-/* 
-0 - 600PX: PHONE
-600 - 900PX: TABLET PORTRAIT
-900 - 1200PX: TABLET LANDSCAPE
-[1200 - 1800PX: NORAMAL STYLES APPLY]
-1800PX + : BIG DESKTOP
-*/
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+// FONT
+@font-face {
+  font-family: customFont;
+  src: url("../src/font/Montserrat-Bold.ttf");
+}
+
+// COLORS
+$color-primary-light: hsl(236, 72%, 79%);
+$color-primary-dark: hsl(237, 63%, 64%);
+$color-secondary-light: hsl(240, 78%, 98%);
+$color-secondary-dark: hsl(234, 14%, 74%);
+$color-tertiary-light: hsl(233, 13%, 49%);
+$color-tertiary-dark: hsl(232, 13%, 33%);
+$color-white: hsl(0, 0%, 100%);
+
+// BORDER RADIUS
+$sm-rounded: 10px;
 
 @mixin respond($breakpoint) {
-  // respond to max 600px screen size
+  // 600px
   @if $breakpoint == phone {
     @media (max-width: 37.5em) {
       @content;
     }
   }
 
-  // respond to max 900px screen size
-  @if $breakpoint == tablet-portrait {
-    @media (max-width: 56.25em) {
+  // 887px
+  @if $breakpoint == laptop-portrait {
+    @media (max-width: 55.4375em) {
       @content;
     }
   }
 
-  // respond to max 1200px screen size
-  @if $breakpoint == tablet-landscape {
+  // 1200px
+  @if $breakpoint == laptop-landscape {
     @media (max-width: 75em) {
       @content;
     }
   }
-
-  // respond to max 1800px screen size
-  @if $breakpoint == big-desktop {
-    @media (min-width: 75em) {
-      @content;
-    }
-  }
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  font-size: 62.5%;
-
-  @include respond(tablet-landscape) {
-    font-size: 56.25%;
-  }
-
-  @include respond(tablet-portrait) {
-    font-size: 50%;
-  }
-
-  @include respond(big-desktop) {
-    font-size: 68.75%;
-  }
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
-  background-color: $color-white;
+  background-color: $color-secondary-light;
+  font-family: customFont, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  @include respond(phone) {
-    padding-bottom: 5rem;
+  @include respond(laptop-portrait) {
+    padding-bottom: 3em;
   }
-}
-
-// background images
-.image-top {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: -5;
-
-  @include respond(phone) {
-    width: 200px;
-  }
-}
-
-.image-bottom {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: -5;
-
-  @include respond(phone) {
-    display: none;
-  }
-}
-
-// utilities
-.heading-primary {
-  font-size: 4rem;
-  color: $color-secondary-dark;
-  margin: 6rem 0;
-
-  @include respond(big-desktop) {
-    font-size: 3rem;
-    margin: 3rem;
-  }
-
-  @include respond(tablet-landscape) {
-    font-size: 3rem;
-    margin: 3rem;
-  }
-}
-.u-text-center {
-  text-align: center;
 }

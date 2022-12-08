@@ -4,70 +4,69 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
-      rel="stylesheet"
+      rel="shortcut icon"
+      href="./src/img/favicon-32x32.png"
+      type="image/x-icon"
     />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Pricing Panel</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Frontendmentor | Pricing component with toggle</title>
   </head>
   <body>
-    <img src="src/img/bg-top.svg" alt="background-images" class="image-top" />
     <img
-      src="src/img/bg-bottom.svg"
-      alt="background-images"
-      class="image-bottom"
+      class="image image__top"
+      src="./src/img/bg-top.svg"
+      alt="wave line top"
     />
-    <div class="content">
-      <h1 class="heading-primary u-text-center">Our Pricing</h1>
-      <div class="row">
-        <div class="annual">Annually</div>
-        <div>
-          <label class="switch" for="toggle">
-            <input type="checkbox" name="toggle" id="toggle" class="slide" />
-            <span class="slider round"></span>
-          </label>
-        </div>
-        <div class="monthly">Monthly</div>
+    <img
+      class="image image__bottom"
+      src="./src/img/bg-bottom.svg"
+      alt="wave line bottom"
+    />
+    <main class="main">
+      <h1 class="main__title">Our Pricing</h1>
+      <div class="main__switch">
+        <fieldset class="main__toggle">
+          <legend>Plan</legend>
+          <input id="annuall" type="radio" name="pricing" />
+          <label for="annuall">Annually</label>
+          <input id="month" type="radio" name="pricing" />
+          <label for="month">Monthly</label>
+        </fieldset>
       </div>
-
-      <div class="pricing-container">
-        <div class="pricing pricing__panel--1">
-          <span class="pricing-header">basic</span>
-          <p>$<span class="price price-basic">199.99</span></p>
-          <ul class="pricing-benifits">
+      <div class="main__pricing">
+        <div class="main__pricing main__pricing--1">
+          <h2 class="main__plan">basic</h2>
+          <p class="main__price">$<span>19.99</span></p>
+          <ul class="main__benifits">
             <li>500 GB Storage</li>
             <li>2 Users Allowed</li>
             <li>Send up to 3 GB</li>
           </ul>
-          <button class="btn">Learn more</button>
+          <button>learn more</button>
         </div>
-        <div class="pricing pricing__panel--2">
-          <span class="pricing-header">professional</span>
-          <p>$<span class="price price-prof">249.99</span></p>
-          <ul class="pricing-benifits">
-            <li>1 TB Storage</li>
+        <div class="main__pricing main__pricing--2">
+          <h2 class="main__plan">professional</h2>
+          <p class="main__price">$<span>24.99</span></p>
+          <ul class="main__benifits">
+            <li>1 GB Storage</li>
             <li>5 Users Allowed</li>
             <li>Send up to 10 GB</li>
           </ul>
-          <button class="btn">Learn more</button>
+          <button>learn more</button>
         </div>
-        <div class="pricing pricing__panel--3">
-          <span class="pricing-header">master</span>
-          <p>$<span class="price price-master">399.99</span></p>
-          <ul class="pricing-benifits">
-            <li>2 TB storage</li>
+        <div class="main__pricing main__pricing--3">
+          <h2 class="main__plan">master</h2>
+          <p class="main__price">$<span>39.99</span></p>
+          <ul class="main__benifits">
+            <li>2 GB Storage</li>
             <li>10 Users Allowed</li>
             <li>Send up to 20 GB</li>
           </ul>
-          <button class="btn">Learn more</button>
+          <button>learn more</button>
         </div>
       </div>
-    </div>
-
-    <script src="./src/js/app.js"></script>
+    </main>
+    <script src="./js/app.js"></script>
   </body>
 </html>

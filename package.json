@@ -4,7 +4,8 @@
   "description": "pricing-component",
   "default": "index.html",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w",
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "compile:sass": "node-sass sass/main.scss css/style.css",
     "start": "parcel index.html",
     "build": "parcel build index.html --dist-dir ./dist"
   },
