@@ -143,26 +143,7 @@ button {
   text-transform: uppercase;
   letter-spacing: 1px;
   border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.4s; }
-
-.image {
-  position: absolute; }
-  @media (max-width: 37.5em) {
-    .image {
-      height: 500px; } }
-  .image__top {
-    top: 0;
-    right: 0; }
-    @media (max-width: 37.5em) {
-      .image__top {
-        right: -150px; } }
-  .image__bottom {
-    left: 0;
-    bottom: 0; }
-    @media (max-width: 37.5em) {
-      .image__bottom {
-        display: none; } }
+  cursor: pointer; }
 
 .main {
   width: 100%;
@@ -172,6 +153,24 @@ button {
   @media (max-width: 75em) {
     .main {
       width: 95%; } }
+  .main__image {
+    position: absolute;
+    z-index: -20; }
+    @media (max-width: 37.5em) {
+      .main__image {
+        height: 500px; } }
+    .main__image--top {
+      top: 0;
+      right: 00px; }
+      @media (max-width: 37.5em) {
+        .main__image--top {
+          right: -150px; } }
+    .main__image--bottom {
+      left: 0;
+      bottom: 0; }
+      @media (max-width: 37.5em) {
+        .main__image--bottom {
+          display: none; } }
   .main__title {
     font-size: clamp(1.5rem, calc(1vw + 1.078rem), 2rem);
     font-weight: 300;
@@ -222,7 +221,8 @@ button {
       .main__pricing--1 button, .main__pricing--3 button {
         color: white;
         background-image: linear-gradient(to right bottom, #a3a8f0, #696fdd);
-        border: 1px solid #a3a8f0; }
+        border: 1px solid #a3a8f0;
+        transition: all 0.3s; }
         .main__pricing--1 button:hover, .main__pricing--3 button:hover {
           color: #696fdd;
           background: white;
@@ -239,7 +239,8 @@ button {
       .main__pricing--2 button {
         color: #696fdd;
         background-color: #f6f6fe;
-        border: 1px solid white; }
+        border: 1px solid white;
+        transition: all 0.3s; }
         .main__pricing--2 button:hover {
           background: none;
           color: white; }
