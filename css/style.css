@@ -65,6 +65,10 @@ select {
   font-family: customFont;
   src: url("../src/font/Montserrat-Bold.ttf"); }
 
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.6rem rgba(109, 112, 141, 0.65); }
+
 body {
   background-color: #f6f6fe;
   font-family: customFont, sans-serif;

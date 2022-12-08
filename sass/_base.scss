@@ -90,6 +90,11 @@ $color-tertiary-light: hsl(233, 13%, 49%);
 $color-tertiary-dark: hsl(232, 13%, 33%);
 $color-white: hsl(0, 0%, 100%);
 
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.6rem rgba($color-tertiary-light, 0.65);
+}
+
 // BORDER RADIUS
 $sm-rounded: 10px;
 
