@@ -55,7 +55,7 @@ This site continuously working with accessibility, I also learning about accessi
 
 ### Useful resources
 
-- [Example resource 1](https://itnext.io/structuring-your-sass-projects-c8d41fa55ed4) - This helped me for a better idea of how to structure your sass file when you dealing with small projects like this but also when you working for a large project. I really liked this pattern and will use it going forward.
+- [resources](https://itnext.io/structuring-your-sass-projects-c8d41fa55ed4) - This helped me for a better idea of how to structure your sass file when you dealing with small projects like this but also when you working for a large project.
 
 ## Author
 
