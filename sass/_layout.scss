@@ -1,5 +1,8 @@
 .image {
   position: absolute;
+  @include respond(phone) {
+    height: 500px;
+  }
 
   &__top {
     top: 0;

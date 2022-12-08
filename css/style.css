@@ -74,7 +74,8 @@ body {
   font-family: customFont, sans-serif;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  overflow-x: hidden; }
   @media (max-width: 55.4375em) {
     body {
       padding-bottom: 3em; } }
@@ -147,6 +148,9 @@ button {
 
 .image {
   position: absolute; }
+  @media (max-width: 37.5em) {
+    .image {
+      height: 500px; } }
   .image__top {
     top: 0;
     right: 0; }
